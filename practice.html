@@ -8,7 +8,7 @@
 
 <body>
     <img src="#">
-    <button onclick="refreshImg()">New Image</button>
+    <button onclick="getCats()">New Image</button>
     <input type="text" id="searchTerm">
     <script>
         let search = 'cats';
@@ -21,7 +21,7 @@
                 img.src = response.data.images.original.url;
             });
 
-        function refreshImg() {
+        function getCats() {
             let searchValue = document.getElementById('searchTerm').value;
             if (searchValue != '') { search = searchValue };
             img.src = '#';
